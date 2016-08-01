@@ -24,6 +24,8 @@ We need to put the description here.
 
 - [ ] Optimize for Mobile
 
+- [ ] Deploy with Heroku
+
 - [ ] Frameworks or libraries are enumerated at [frameworks page](STACK.md)
 
 ### Required
