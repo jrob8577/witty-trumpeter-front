@@ -5,12 +5,26 @@ We need to put the description here.
 [Back End Source Code](https://github.com/jrob8577/witty-trumpeter-back)
 
 ## Specifications
-- [ ] When the site loads up, I want a map to appear and a way where I just enter my zip code and then the map automatically transports me to the theaters closest to me.
-- [ ] When I click on a theater location, I just want a theater photo, information, customer rating (for the theater), price rating ($ - $$$$), and a button to click through to current showtimes. 
-- [ ] I want a  service that saves credit card info, preferred theater, and preferred film genre. 
-- [ ] Please make sure everything loads for me, thanks!
-- [ ] If you use any frameworks or code libraries, please cite them and/or explain how you implemented them in a gitbook, or on your README.
-- [ ] Bonus: Optimize for Mobile. 
+
+- [ ] When the site loads, a map appears with a means of specifying a zip code  
+
+- [ ] When entered, the map shows theaters in that zip code
+
+- [ ] When a theater location is clicked, a popup displays the theater name and address, and a button to click through to current showtimes
+
+- [ ] Users have the ability to favorite a single movie theater
+
+- [ ] When a movie theater is favorited, the application opens to that theater's detail page
+
+- [ ] Users can view a theaters detail page that displays theater information (address, name) and movie listings
+
+- [ ] Each movie listing includes title, rating, runtime, genres, IMDB link if available, trailer link if available
+
+- [ ] Movie trailers (where available) can be viewed in a model
+
+- [ ] Optimize for Mobile
+
+- [ ] Frameworks or libraries are enumerated at [frameworks page](STACK.md)
 
 ### Required
 
