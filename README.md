@@ -1,3 +1,9 @@
+## Description
+
+We need to put the description here.
+
+[Back End Source Code](https://github.com/jrob8577/witty-trumpeter-back)
+
 ## Specifications
 - [ ] When the site loads up, I want a map to appear and a way where I just enter my zip code and then the map automatically transports me to the theaters closest to me.
 - [ ] When I click on a theater location, I just want a theater photo, information, customer rating (for the theater), price rating ($ - $$$$), and a button to click through to current showtimes. 
