@@ -18,7 +18,7 @@ We need to put the description here.
 
 - [ ] Users can view a theaters detail page that displays theater information (address, name) and movie listings
 
-- [ ] Each movie listing includes title, rating, runtime, genres, IMDB link if available, trailer link if available
+- [ ] Each movie listing includes title, rating, runtime, genres, IMDB link if available, trailer link if available, showtimes for today with links to purchase
 
 - [ ] Movie trailers (where available) can be viewed in a model
 
