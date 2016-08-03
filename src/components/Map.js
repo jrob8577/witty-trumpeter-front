@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOMServer from 'react-dom/server'
+import ReactDOM from 'react-dom'
 
 import GoogleMapsLoader from 'google-maps'
 GoogleMapsLoader.KEY = 'AIzaSyCHK9oNzGKZNOAFpmaUPtpkCOJ4WVaxdCY'
@@ -31,11 +31,7 @@ class Map extends Component {
 
       const { theaters } = this.props
 
-      theaters.forEach( theater => {
-        const info = new google.maps.InfoWindow({
-          content: ReactDOMServer.renderToString( <InfoWindow {...theater} /> )
-        })
-
+      const createMarker = theater => {
         const marker = new google.maps.Marker({
           map,
           id: theater.id,
@@ -43,8 +39,16 @@ class Map extends Component {
           position: theater.coordinates
         })
 
+        const info = new google.maps.InfoWindow()
+
+        const div = document.createElement( 'div' )
+        ReactDOM.render( <InfoWindow {...theater} history={this.props.history} />, div )
+        info.setContent( div )
+
         marker.addListener( 'click', () => info.open( map, marker ))
-      })
+      }
+
+      theaters.forEach( createMarker.bind( this ))
     })
   }
 

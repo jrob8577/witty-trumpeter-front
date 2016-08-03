@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
-
 
 class InfoWindow extends Component {
+  onClick( event ) {
+    event.preventDefault()
+
+    this.props.history.push( `/theater-details/${this.props.id}` )
+  }
+
   render() {
-    return ( 
+    return (
     	<div className="theater-window">
         <div className="name">{this.props.name}</div>
         <div className="address">{this.props.address}</div>
-
-        <button key={this.props.id}>
-          <Link to={`/theater-details/${this.props.id}`}>Showtimes</Link>
-        </button>
-
-      </div> 
+        <a href="#" onClick={this.onClick.bind(this)}>Showtimes</a>
+      </div>
     )
   }
 }
