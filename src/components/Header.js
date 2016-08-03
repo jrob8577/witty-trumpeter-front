@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ZipcodeForm from './ZipcodeForm';
+
 import '../App.css';
 
 class Header extends Component {
@@ -18,9 +19,7 @@ class Header extends Component {
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ZipcodeForm />
-
+            <ZipcodeForm zipCodeEntered={this.props.zipCodeEntered} />
           </div>
         </div>
       </nav>
