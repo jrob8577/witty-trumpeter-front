@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
+
 
 class InfoWindow extends Component {
   render() {
@@ -6,7 +8,11 @@ class InfoWindow extends Component {
     	<div className="theater-window">
         <div className="name">{this.props.name}</div>
         <div className="address">{this.props.address}</div>
-        <button>Showtimes</button>
+
+        <button key={this.props.id}>
+          <Link to={`/theater-details/${this.props.id}`}>Showtimes</Link>
+        </button>
+
       </div> 
     )
   }

@@ -38,6 +38,7 @@ class Map extends Component {
 
         const marker = new google.maps.Marker({
           map,
+          id: theater.id,
           title: theater.name,
           position: theater.coordinates
         })
