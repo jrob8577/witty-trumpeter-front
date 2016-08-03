@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import ReactDOMServer from 'react-dom/server'
+
 import GoogleMapsLoader from 'google-maps'
 GoogleMapsLoader.KEY = 'AIzaSyCHK9oNzGKZNOAFpmaUPtpkCOJ4WVaxdCY'
 
+import InfoWindow from './InfoWindow'
 import '../App.css'
 
 class Map extends Component {
@@ -20,11 +23,27 @@ class Map extends Component {
       const options = {
         center,
         draggable: false,
-        zoom: 12,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
 
-      new google.maps.Map( element, options )
+      const map = new google.maps.Map( element, options )
+
+      const { theaters } = this.props
+
+      theaters.forEach( theater => {
+        const info = new google.maps.InfoWindow({
+          content: ReactDOMServer.renderToString( <InfoWindow {...theater} /> )
+        })
+
+        const marker = new google.maps.Marker({
+          map,
+          title: theater.name,
+          position: theater.coordinates
+        })
+
+        marker.addListener( 'click', () => info.open( map, marker ))
+      })
     })
   }
 
