@@ -5,7 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Map from './components/Map'
 
-const API = 'http://localhost:3000'
+const API = 'http://localhost:4000'
 const DEFAULT_ZIP = '94607'
 const DEFAULT_CENTER = { lat: 37.8044444, lng: -122.2697222 }
 
