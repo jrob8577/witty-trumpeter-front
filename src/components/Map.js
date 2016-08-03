@@ -1,19 +1,31 @@
 import React, { Component } from 'react'
+import GoogleMapsLoader from 'google-maps'
+GoogleMapsLoader.KEY = 'AIzaSyCHK9oNzGKZNOAFpmaUPtpkCOJ4WVaxdCY'
+
 import '../App.css'
 
 class Map extends Component {
   componentDidMount() {
+    this.loadMap( this.props.center )
+  }
 
-    const initialize = () => {
-      var mapProp = {
-        center: new google.maps.LatLng(37.8044444,-122.2697222),
+  componentDidUpdate() {
+    this.loadMap( this.props.center )
+  }
+
+  loadMap( center ) {
+    const element = document.getElementById( "googleMap" )
+
+    GoogleMapsLoader.load( google => {
+      const options = {
+        center,
+        draggable: false,
         zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
+      }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+      new google.maps.Map( element, options )
+    })
   }
 
   render() {

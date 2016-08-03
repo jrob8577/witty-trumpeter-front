@@ -8,8 +8,8 @@ html, body, #googleMap {
 
 @media (min-width: 768px) {
   .navbar {
-      border-radius: 0px;
-      opacity: 0.85;
+    border-radius: 0px;
+    opacity: 0.85;
   }
 }
 
