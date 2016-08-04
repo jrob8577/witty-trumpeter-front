@@ -35,12 +35,38 @@ export default class MovieListing extends Component {
     })
   }
 
+  embedLink() {
+    const { trailer } = this.props
+
+    const watch = 'http://www.youtube.com/watch?v='
+    const embed = 'http://www.youtube.com/embed/'
+
+    return trailer.replace( watch, embed )
+  }
+
+  toggleTrailer( event ) {
+    const element = document.querySelector( '#trailer-modal' )
+
+    element.innerHTML =
+      `<div><div><iframe src=${this.embedLink()} width="560" height="315"
+        frameBorder="0" allowFullScreen>
+      </iframe></div></div>`
+
+    element.classList.add( 'show-modal' )
+  }
+
+  image() {
+    if( this.state.tmdb.poster_path ) {
+      return <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" />
+    }
+  }
+
   render() {
     return (
       <div className="movie jumbotron">
         <div className="row">
           <div className="col-md-4">
-            <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" /> 
+            {this.image()}
           </div>
           <div className="col-md-8">
             <h2>{this.props.name}</h2>
@@ -53,7 +79,8 @@ export default class MovieListing extends Component {
             </div>
 
             <div className="trailer">
-              {this.props.trailer}
+              <button className="btn btn-danger"
+                onClick={this.toggleTrailer.bind(this)}>Trailer</button>
             </div>
           </div>
         </div>
