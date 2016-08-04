@@ -23,14 +23,23 @@ class TheaterDetails extends Component {
   }
 
   movieList() {
-    return this.state.movies.map( (movie, index) => 
+    return this.state.movies.map( (movie, index) =>
       <MovieListing {...movie} key={`movie-${index}`} />
     )
   }
 
+  hideModal( event ) {
+    const element = document.querySelector( '#trailer-modal' )
+
+    element.classList.remove( 'show-modal' )
+    element.innerHTML = ''
+  }
+
   render() {
     return (
-      <span>
+      <div>
+        <div className="comic-modal-one" id="trailer-modal" onClick={this.hideModal.bind(this)}></div>
+
         <div className="map-background">
           <Header />
           <br/>
@@ -45,7 +54,7 @@ class TheaterDetails extends Component {
             </div>
           </div>
         </div>
-      </span>
+      </div>
 
     )
   }

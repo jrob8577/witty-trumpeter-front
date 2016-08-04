@@ -17,6 +17,39 @@ html, body, #googleMap {
   text-align: center;
 }
 
+.menu {
+  display:block;
+  menu-width:250px;
+}
+
 .map-background {
   background: url('./map-background.png') fixed;
+}
+
+.jumbotron {
+  background-color: #FFFFFF
+}
+
+.comic-modal-one {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+}
+
+.comic-modal-one.show-modal {
+  display: block;
+}
+
+.comic-modal-one div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.comic-modal-one div div {
+  margin: auto;
+  width: 560px;
+  height: 315px;
 }
