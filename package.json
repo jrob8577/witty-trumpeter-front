@@ -8,7 +8,6 @@
     "react-scripts": "0.2.1"
   },
   "dependencies": {
-    "blueimp-md5": "^2.3.0",
     "google-maps": "^3.2.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
