@@ -12,9 +12,9 @@ We need to put the description here.
 
 - [X] When a theater location is clicked, a popup displays the theater name and address, and a button to click through to current showtimes
 
-- [ ] Users have the ability to favorite a single movie theater
+- [X] Users have the ability to favorite a single movie theater
 
-- [ ] When a movie theater is favorited, the application opens to that theater's detail page
+- [X] When a movie theater is favorited, the application opens to that theater's detail page
 
 - [X] Users can view a theaters detail page that displays theater information (address, name) and movie listings
 
