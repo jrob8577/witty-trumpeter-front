@@ -54,3 +54,7 @@ html, body, #googleMap {
   width: 560px;
   height: 315px;
 }
+
+.map-background .zip-code-form {
+  display: none;
+}

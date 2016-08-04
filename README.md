@@ -6,23 +6,23 @@ We need to put the description here.
 
 ## Specifications
 
-- [ ] When the site loads, a map appears with a means of specifying a zip code  
+- [X] When the site loads, a map appears with a means of specifying a zip code  
 
-- [ ] When entered, the map shows theaters in that zip code
+- [X] When entered, the map shows theaters in that zip code
 
-- [ ] When a theater location is clicked, a popup displays the theater name and address, and a button to click through to current showtimes
+- [X] When a theater location is clicked, a popup displays the theater name and address, and a button to click through to current showtimes
 
 - [ ] Users have the ability to favorite a single movie theater
 
 - [ ] When a movie theater is favorited, the application opens to that theater's detail page
 
-- [ ] Users can view a theaters detail page that displays theater information (address, name) and movie listings
+- [X] Users can view a theaters detail page that displays theater information (address, name) and movie listings
 
-- [ ] Each movie listing includes title, rating, runtime, genres, IMDB link if available, trailer link if available, showtimes for today with links to purchase
+- [X] Each movie listing includes title, rating, runtime, genres, IMDB link if available, trailer link if available, showtimes for today with links to purchase
 
-- [ ] Movie trailers (where available) can be viewed in a model
+- [X] Movie trailers (where available) can be viewed in a model
 
-- [ ] Optimize for Mobile
+- [X] Optimize for Mobile
 
 - [ ] Deploy with Heroku
 

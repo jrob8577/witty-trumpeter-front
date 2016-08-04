@@ -63,20 +63,21 @@ export default class MovieListing extends Component {
 
   render() {
     return (
-      <div className="movie jumbotron">
+      <div className="jumbotron">
         <div className="row">
           <div className="col-md-4">
             {this.image()}
           </div>
           <div className="col-md-8">
-            <h2>{this.props.name}</h2>
-            <div className="runtime">{this.props.runtime}</div>
+            <h1>{this.props.name}</h1>
+            <h4>{this.props.runtime}</h4>
             <div className="rating label label-primary">{this.props.rating}</div>
             <div className="genres">{this.props.genre.join(' ')}</div>
 
             <div className="showtimes">
               {this.showtimesList()}
             </div>
+            <div><a className="imbd btn btn-primary" href={`${this.props.imdb}`}>Imdb</a></div>
 
             <div className="trailer">
               <button className="btn btn-danger"

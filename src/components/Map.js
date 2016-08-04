@@ -29,6 +29,10 @@ class Map extends Component {
 
       const map = new google.maps.Map( element, options )
 
+      google.maps.event.addDomListener( element, 'resize', () => {
+        map.setCenter( center )
+      })
+
       const { theaters } = this.props
 
       const createMarker = theater => {

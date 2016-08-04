@@ -9,22 +9,14 @@ class Header extends Component {
       <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-            <a className="navbar-brand" href="#">MovieNerd</a>
+            <a className="navbar-brand" href="/">MovieNerd</a>
           </div>
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ZipcodeForm zipCodeEntered={this.props.zipCodeEntered} />
-          </div>
+          <ZipcodeForm zipCode={this.props.zipCode} zipCodeEntered={this.props.zipCodeEntered} />
         </div>
       </nav>
     );
   }
 }
 
-export default Header;
+export default Header
