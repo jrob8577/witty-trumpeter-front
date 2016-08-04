@@ -38,21 +38,25 @@ export default class MovieListing extends Component {
   render() {
     return (
       <div className="movie jumbotron">
-        <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" /> 
+        <div className="row">
+          <div className="col-md-4">
+            <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" /> 
+          </div>
+          <div className="col-md-8">
+            <h2>{this.props.name}</h2>
+            <div className="runtime">{this.props.runtime}</div>
+            <div className="rating label label-primary">{this.props.rating}</div>
+            <div className="genres">{this.props.genre.join(' ')}</div>
 
-        <h2>{this.props.name}</h2>
-        <div className="runtime">{this.props.runtime}</div>
-        <div className="rating label label-primary">{this.props.rating}</div>
-        <div className="genres">{this.props.genre.join(' ')}</div>
+            <div className="showtimes">
+              {this.showtimesList()}
+            </div>
 
-        <div className="showtimes">
-          {this.showtimesList()}
+            <div className="trailer">
+              {this.props.trailer}
+            </div>
+          </div>
         </div>
-
-        <div className="trailer">
-          {this.props.trailer}
-        </div>
-        <br/>
       </div>
     )
   }
