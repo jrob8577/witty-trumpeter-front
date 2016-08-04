@@ -16,3 +16,7 @@ html, body, #googleMap {
 .App {
   text-align: center;
 }
+
+.map-background {
+  background: url('./map-background.png') fixed;
+}

@@ -1,28 +1,52 @@
 import React, { Component } from 'react'
-import 'react-router'
+import MovieListing from './MovieListing'
+import Header from './Header';
+
 
 const API = 'http://localhost:4000'
 
 class TheaterDetails extends Component {
-  componentDidMount() {
-    this.setState({
-      theaterId: this.props.params.theaterId
-    })
+  constructor( props ) {
+    super( props )
 
-    // fetch( `${API}/theater/${  }`, { mode: 'cors' } )
-    //   .then( response => response.json() )
-    //   .then( geocodeInfo => {
-    //     const center = (( geocodeInfo.results[ 0 ] || {} ).geometry || {} ).location || DEFAULT_CENTER
-    //
-    //     this.setState({ zipCode, theaters, center })
-    //   })
+    this.state = {
+      name: '',
+      address: '',
+      movies: []
+    }
+  }
+
+  componentDidMount() {
+    fetch( `${API}/theater/${this.props.routeParams.theaterId}`, { mode: 'cors' } )
+      .then( response => response.json() )
+      .then( theater => this.setState({...theater}))
+  }
+
+  movieList() {
+    return this.state.movies.map( (movie, index) => 
+      <MovieListing {...movie} key={`movie-${index}`} />
+    )
   }
 
   render() {
     return (
-       <div>
-        <h2>Hello Buddy</h2>
-      </div>
+      <span>
+        <div className="map-background">
+          <Header />
+          <br/>
+          <br/>
+          <br/>
+          <div className="container">
+            <h1><strong>{this.state.name}</strong></h1>
+            <h4>{this.state.address}</h4>
+            <h5>{this.state.phoneNumber}</h5>
+            <div className="movie-listing">
+              {this.movieList()}
+            </div>
+          </div>
+        </div>
+      </span>
+
     )
   }
 }
