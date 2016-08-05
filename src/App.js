@@ -41,7 +41,7 @@ class App extends Component {
       <div>
         <Header zipCode={this.state.zip}
           zipCodeEntered={this.zipCodeEntered.bind(this)} />
-        <Map {...this.state} history={this.props.history} />
+        <Map {...this.state} />
       </div>
     )
   }
