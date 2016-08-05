@@ -7,3 +7,6 @@ node_modules
 
 # Debug log from npm
 *.log
+
+.DS_Store
+src/.DS_Store
