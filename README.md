@@ -1,6 +1,12 @@
 ## Description
 
-We need to put the description here.
+Find the closet movie theaters near you.
+
+-- Website Url
+(https://calm-lake-16810.herokuapp.com/theater-details/9d16960a1cb7f45f)
+
+-- Backend Endpoint
+(https://immense-forest-73448.herokuapp.com/theater/list/95350)
 
 [Back End Source Code](https://github.com/jrob8577/witty-trumpeter-back)
 
