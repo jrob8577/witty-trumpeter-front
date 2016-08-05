@@ -86,8 +86,8 @@ export default class MovieListing extends Component {
             </div>
 
             <div className="trailer">
-              <a className="imbd btn btn-primary" href={`${this.props.imdb}`}>Imdb</a>
-              <button className="btn btn-danger"
+              <a className="imbd btn btn-lg btn-primary" href={`${this.props.imdb}`}>Imdb</a>
+              <button className="btn btn-danger btn-lg"
                 onClick={this.toggleTrailer.bind(this)}>Trailer</button>
             </div>
           </div>
