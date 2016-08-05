@@ -58,3 +58,11 @@ html, body, #googleMap {
 .map-background .zip-code-form {
   display: none;
 }
+
+.trailer .btn, .showtimes .btn {
+  margin-right: 5px;
+}
+
+.rating, .genres, .showtimes {
+  margin-bottom: 5px;
+}

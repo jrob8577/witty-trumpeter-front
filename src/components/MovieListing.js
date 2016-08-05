@@ -28,7 +28,7 @@ export default class MovieListing extends Component {
       const ticketLink = (showtime_tickets || {})[ showtime ]
 
       if( ticketLink ) {
-        return <a href={ticketLink} target="_blank" key={`st-${index}`}>{showtime}</a>
+        return <a className="btn btn-info btn-xs" href={ticketLink} target="_blank" key={`st-${index}`}>{showtime}</a>
       } else {
         return <span className="no-ticket" key={`st-${index}`}>{showtime}</span>
       }
@@ -57,29 +57,36 @@ export default class MovieListing extends Component {
 
   image() {
     if( this.state.tmdb.poster_path ) {
-      return <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" />
+      return <img className="img-responsive" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.tmdb.poster_path}`} alt="poster" />
     }
+  }
+
+  genres() {
+    const mapper = ( genre, index ) => 
+      <span key={`${this.props.name}-g-${index}`} className="label label-default">{genre}</span>
+
+    return this.props.genre.map( mapper )
   }
 
   render() {
     return (
       <div className="jumbotron">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 col-sm-4">
             {this.image()}
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 col-sm-8">
             <h1>{this.props.name}</h1>
             <h4>{this.props.runtime}</h4>
             <div className="rating label label-primary">{this.props.rating}</div>
-            <div className="genres">{this.props.genre.join(' ')}</div>
+            <div className="genres">{this.genres()}</div>
 
             <div className="showtimes">
               {this.showtimesList()}
             </div>
-            <div><a className="imbd btn btn-primary" href={`${this.props.imdb}`}>Imdb</a></div>
 
             <div className="trailer">
+              <a className="imbd btn btn-primary" href={`${this.props.imdb}`}>Imdb</a>
               <button className="btn btn-danger"
                 onClick={this.toggleTrailer.bind(this)}>Trailer</button>
             </div>
