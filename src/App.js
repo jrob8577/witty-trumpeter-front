@@ -24,7 +24,7 @@ class App extends Component {
     fetch( `${API}/theater/list/${zipCode}`, { mode: 'cors' } )
       .then( response => response.json() )
       .then( theaters => {
-        fetch( `http://maps.googleapis.com/maps/api/geocode/json?address=${ zipCode }`, { mode: 'cors' } )
+        fetch( `//maps.googleapis.com/maps/api/geocode/json?address=${ zipCode }`, { mode: 'cors' } )
           .then( response => response.json() )
           .then( geocodeInfo => {
             const center = (( geocodeInfo.results[ 0 ] || {} ).geometry || {} ).location || DEFAULT_CENTER
