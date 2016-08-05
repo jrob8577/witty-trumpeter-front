@@ -62,7 +62,7 @@ export default class MovieListing extends Component {
   }
 
   genres() {
-    const mapper = ( genre, index ) => 
+    const mapper = ( genre, index ) =>
       <span key={`${this.props.name}-g-${index}`} className="label label-default">{genre}</span>
 
     return this.props.genre.map( mapper )
@@ -90,6 +90,12 @@ export default class MovieListing extends Component {
               <button className="btn btn-danger btn-lg"
                 onClick={this.toggleTrailer.bind(this)}>Trailer</button>
             </div>
+
+            <br/>
+            <blockquote>
+              <p>Overview:</p>
+              <p>{this.state.tmdb.overview}</p>
+            </blockquote>
           </div>
         </div>
       </div>
