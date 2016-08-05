@@ -27,6 +27,7 @@ html, body, #googleMap {
 }
 
 .jumbotron {
+  margin-top: 15px;
   background-color: #FFFFFF
 }
 
@@ -64,5 +65,9 @@ html, body, #googleMap {
 }
 
 .rating, .genres, .showtimes {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.Theater-Name {
+  font-size: 60px;
 }

@@ -72,14 +72,13 @@ class TheaterDetails extends Component {
           <br/>
           <br/>
           <div className="container">
-            <h1><strong>{this.state.name}</strong></h1>
-
+            <h1 className="Theater-Name"><strong>{this.state.name}</strong></h1>            
             <button type="button" className="btn btn-default btn-lg" onClick={this.setFavorite.bind(this)}>
               <span className={`glyphicon ${this.favoriteClass()}`}></span> Favorite
             </button>
 
-            <h4>{this.state.address}</h4>
-            <h5>{this.state.phoneNumber}</h5>
+            <h3>{this.state.address}</h3>
+            <h3>{this.state.phoneNumber}</h3>
             <div className="movie-listing">
               {this.movieList()}
             </div>
