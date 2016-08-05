@@ -24,7 +24,7 @@ We need to put the description here.
 
 - [X] Optimize for Mobile
 
-- [ ] Deploy with Heroku
+- [X] Deploy with Heroku
 
 - [X] Frameworks or libraries are enumerated at [frameworks page](STACK.md)
 
