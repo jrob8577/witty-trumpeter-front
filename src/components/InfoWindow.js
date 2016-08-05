@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
 
 class InfoWindow extends Component {
   onClick( event ) {
     event.preventDefault()
 
-    this.props.history.push( `/theater-details/${this.props.id}` )
+    browserHistory.push( `/theater-details/${this.props.id}` )
   }
 
   render() {

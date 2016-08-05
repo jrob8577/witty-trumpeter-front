@@ -35,6 +35,33 @@ class TheaterDetails extends Component {
     element.innerHTML = ''
   }
 
+  favoriteClass() {
+    const data = window.localStorage.movieNerd
+
+    if( data && data === this.state.id ) {
+      return 'glyphicon-star'
+    } else {
+      return 'glyphicon-star-empty'
+    }
+  }
+
+  setFavorite( event ) {
+    const parent = event.target
+    const child = parent.children[ 0 ]
+
+    if( child.classList.contains( 'glyphicon-star-empty' ) ) {
+      child.classList.add( 'glyphicon-star' )
+      child.classList.remove( 'glyphicon-star-empty' )
+
+      localStorage.setItem( 'movieNerd', this.state.id )
+    } else {
+      child.classList.add( 'glyphicon-star-empty' )
+      child.classList.remove( 'glyphicon-star' )
+
+      localStorage.removeItem( 'movieNerd' )
+    }
+  }
+
   render() {
     return (
       <div>
@@ -47,6 +74,11 @@ class TheaterDetails extends Component {
           <br/>
           <div className="container">
             <h1><strong>{this.state.name}</strong></h1>
+            
+            <button type="button" className="btn btn-default btn-lg" onClick={this.setFavorite.bind(this)}>
+              <span className={`glyphicon ${this.favoriteClass()}`}></span> Favorite
+            </button>
+
             <h4>{this.state.address}</h4>
             <h5>{this.state.phoneNumber}</h5>
             <div className="movie-listing">

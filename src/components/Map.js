@@ -46,7 +46,7 @@ class Map extends Component {
         const info = new google.maps.InfoWindow()
 
         const div = document.createElement( 'div' )
-        ReactDOM.render( <InfoWindow {...theater} history={this.props.history} />, div )
+        ReactDOM.render( <InfoWindow {...theater} />, div )
         info.setContent( div )
 
         marker.addListener( 'click', () => info.open( map, marker ))
