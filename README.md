@@ -26,7 +26,7 @@ We need to put the description here.
 
 - [ ] Deploy with Heroku
 
-- [ ] Frameworks or libraries are enumerated at [frameworks page](STACK.md)
+- [X] Frameworks or libraries are enumerated at [frameworks page](STACK.md)
 
 ### Required
 
