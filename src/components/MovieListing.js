@@ -39,7 +39,7 @@ export default class MovieListing extends Component {
     const { trailer } = this.props
 
     const watch = 'http://www.youtube.com/watch?v='
-    const embed = 'http://www.youtube.com/embed/'
+    const embed = 'https://www.youtube.com/embed/'
 
     return trailer.replace( watch, embed )
   }
