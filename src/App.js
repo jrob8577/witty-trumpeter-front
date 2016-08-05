@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   render() {
-      console.log( process.env )
+      console.log( process.env, NODE_ENV )
     return (
       <div>
         <Header zipCode={this.state.zip}
