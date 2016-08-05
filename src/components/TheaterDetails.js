@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MovieListing from './MovieListing'
 import Header from './Header';
 
-const API = process.env.MOVIE_API || 'http://localhost:4000'
+import API from './api'
 
 class TheaterDetails extends Component {
   constructor( props ) {
@@ -72,7 +72,7 @@ class TheaterDetails extends Component {
           <br/>
           <br/>
           <div className="container">
-            <h1 className="Theater-Name"><strong>{this.state.name}</strong></h1>            
+            <h1 className="Theater-Name"><strong>{this.state.name}</strong></h1>
             <button type="button" className="btn btn-default btn-lg" onClick={this.setFavorite.bind(this)}>
               <span className={`glyphicon ${this.favoriteClass()}`}></span> Favorite
             </button>

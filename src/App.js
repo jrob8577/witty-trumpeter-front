@@ -4,8 +4,8 @@ import './App.css'
 
 import Header from './components/Header'
 import Map from './components/Map'
+import API from './components/api'
 
-const API = 'https://immense-forest-73448.herokuapp.com' || 'http://localhost:4000'
 const DEFAULT_ZIP = '94607'
 const DEFAULT_CENTER = { lat: 37.8044444, lng: -122.2697222 }
 
@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   render() {
-      console.log( process.env, NODE_ENV )
     return (
       <div>
         <Header zipCode={this.state.zip}
