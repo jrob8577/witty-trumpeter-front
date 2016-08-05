@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MovieListing from './MovieListing'
 import Header from './Header';
 
-import API from './api'
+import { API } from './api'
 
 class TheaterDetails extends Component {
   constructor( props ) {
