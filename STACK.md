@@ -1,9 +1,9 @@
--- Back-End
+### Back-End
 - [Showtime-API](https://github.com/erunion/showtimes)
 - [Express.js](https://expressjs.com/)
 - [NodeGeocoder](https://github.com/nchaulet/node-geocoder)
 
--- Front-End
+### Front-End
 - [React.js](https://facebook.github.io/react/)
 - [BootstrapCSS](http://getbootstrap.com/css/)
 - [GoogleMapsApi](https://developers.google.com/maps/documentation/javascript/)
