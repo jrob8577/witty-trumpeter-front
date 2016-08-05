@@ -1,6 +1,6 @@
 ## Description
 
-### Find the closet movie theaters near you.
+Find the closet movie theaters near you.
 
 -- Website Url
 (https://calm-lake-16810.herokuapp.com/theater-details/9d16960a1cb7f45f)
